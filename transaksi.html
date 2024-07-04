@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaksi</title>
+    <link rel="stylesheet" href="transaksi.css">
+</head>
+<body>
+    <header>
+        <h1>Transaksi</h1>
+    </header>
+    <main>
+        <section id="transaction-form">
+            <h2>Pilih Jenis Transaksi</h2>
+            <form id="form">
+                <div class="form-group">
+                    <label for="transaction-type">Jenis Transaksi:</label>
+                    <select id="transaction-type" name="transaction-type" onchange="showForm()">
+                        <option value="">Pilih Transaksi</option>
+                        <option value="hotel">Booking Hotel</option>
+                        <option value="flight">Tiket Pesawat</option>
+                        <option value="tour">Paket Tour</option>
+                    </select>
+                </div>
+
+                <div id="hotel-form" class="form-details hidden">
+                    <h3>Booking Hotel</h3>
+                    <div class="form-group">
+                        <label for="hotel-name">Nama Hotel:</label>
+                        <input type="text" id="hotel-name" name="hotel-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="check-in">Tanggal Check-in:</label>
+                        <input type="date" id="check-in" name="check-in">
+                    </div>
+                    <div class="form-group">
+                        <label for="check-out">Tanggal Check-out:</label>
+                        <input type="date" id="check-out" name="check-out">
+                    </div>
+                </div>
+
+                <div id="flight-form" class="form-details hidden">
+                    <h3>Tiket Pesawat</h3>
+                    <div class="form-group">
+                        <label for="departure">Kota Keberangkatan:</label>
+                        <input type="text" id="departure" name="departure">
+                    </div>
+                    <div class="form-group">
+                        <label for="destination">Kota Tujuan:</label>
+                        <input type="text" id="destination" name="destination">
+                    </div>
+                    <div class="form-group">
+                        <label for="departure-date">Tanggal Keberangkatan:</label>
+                        <input type="date" id="departure-date" name="departure-date">
+                    </div>
+                </div>
+
+                <div id="tour-form" class="form-details hidden">
+                    <h3>Paket Tour</h3>
+                    <div class="form-group">
+                        <label for="tour-name">Nama Paket Tour:</label>
+                        <input type="text" id="tour-name" name="tour-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="tour-date">Tanggal Tour:</label>
+                        <input type="date" id="tour-date" name="tour-date">
+                    </div>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="transaksi.js"></script>
+</body>
+</html>
